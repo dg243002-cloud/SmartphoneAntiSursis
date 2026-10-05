@@ -21,7 +21,37 @@ const QUESTIONS = [
   { q: "dangerous", choices: ["安全な", "危険な", "有名な"], answer: 1, explain: "dangerous = 危険な ⇔ safe" },
   { q: "habit", choices: ["習慣", "趣味", "才能"], answer: 0, explain: "habit = 習慣" },
   { q: "protect", choices: ["守る", "運ぶ", "借りる"], answer: 0, explain: "protect = 守る" },
-  { q: "successful", choices: ["成功した", "疲れた", "退屈な"], answer: 0, explain: "successful = 成功した（success の形容詞）" }
+  { q: "successful", choices: ["成功した", "疲れた", "退屈な"], answer: 0, explain: "successful = 成功した（success の形容詞）" },
+
+  // ----- 歴史（日本史・世界史） -----
+  { label: "【日本史】", q: "鎌倉幕府を開いた人物は？", choices: ["足利尊氏", "源頼朝", "徳川家康"], answer: 1, explain: "源頼朝が鎌倉に幕府を開いた（1180年代）" },
+  { label: "【日本史】", q: "室町幕府を開いた人物は？", choices: ["足利尊氏", "平清盛", "北条時宗"], answer: 0, explain: "足利尊氏が京都に室町幕府を開いた（1338年）" },
+  { label: "【日本史】", q: "江戸幕府を開いた人物は？", choices: ["織田信長", "豊臣秀吉", "徳川家康"], answer: 2, explain: "徳川家康が1603年に江戸幕府を開いた" },
+  { label: "【日本史】", q: "関ヶ原の戦いが起きた年は？", choices: ["1600年", "1543年", "1868年"], answer: 0, explain: "1600年。徳川家康の東軍が勝利した" },
+  { label: "【日本史】", q: "本能寺の変で織田信長を討った武将は？", choices: ["石田三成", "明智光秀", "武田信玄"], answer: 1, explain: "1582年、明智光秀が本能寺の織田信長を襲った" },
+  { label: "【日本史】", q: "豊臣秀吉が農民から武器を取り上げた政策は？", choices: ["楽市楽座", "刀狩", "参勤交代"], answer: 1, explain: "刀狩。一揆を防ぎ、武士と農民の身分を分けた" },
+  { label: "【日本史】", q: "参勤交代を制度として定めた江戸幕府の法令は？", choices: ["武家諸法度", "御成敗式目", "十七条の憲法"], answer: 0, explain: "武家諸法度。1635年に徳川家光が参勤交代を制度化した" },
+  { label: "【日本史】", q: "大政奉還を行った江戸幕府の15代将軍は？", choices: ["徳川家光", "徳川慶喜", "徳川吉宗"], answer: 1, explain: "1867年、徳川慶喜が政権を朝廷に返した" },
+  { label: "【日本史】", q: "ペリーが黒船で来航した年は？", choices: ["1853年", "1603年", "1945年"], answer: 0, explain: "1853年、浦賀に来航して開国を求めた" },
+  { label: "【日本史】", q: "明治維新で新政府が始まった年は？", choices: ["1853年", "1868年", "1894年"], answer: 1, explain: "1868年に明治時代が始まった" },
+  { label: "【日本史】", q: "日本の初代内閣総理大臣は？", choices: ["伊藤博文", "大久保利通", "西郷隆盛"], answer: 0, explain: "伊藤博文が1885年に初代内閣総理大臣となった" },
+  { label: "【日本史】", q: "日清戦争が始まった年は？", choices: ["1868年", "1894年", "1914年"], answer: 1, explain: "1894年に日清戦争が始まった" },
+  { label: "【日本史】", q: "日露戦争が始まった年は？", choices: ["1894年", "1904年", "1937年"], answer: 1, explain: "1904年に日露戦争が始まった" },
+  { label: "【日本史】", q: "日本国憲法が施行された年は？", choices: ["1945年", "1947年", "1952年"], answer: 1, explain: "1947年5月3日に施行（公布は1946年11月3日）" },
+  { label: "【日本史】", q: "平安京に都を移した天皇は？", choices: ["天武天皇", "桓武天皇", "聖武天皇"], answer: 1, explain: "桓武天皇が794年に平安京へ遷都した" },
+  { label: "【日本史】", q: "十七条の憲法を定めた人物は？", choices: ["聖徳太子", "中大兄皇子", "天智天皇"], answer: 0, explain: "聖徳太子（厩戸皇子）が604年に定めた" },
+  { label: "【日本史】", q: "645年に始まった政治改革は？", choices: ["大化の改新", "明治維新", "享保の改革"], answer: 0, explain: "中大兄皇子と中臣鎌足らによる大化の改新" },
+  { label: "【日本史】", q: "『源氏物語』の作者は？", choices: ["清少納言", "紫式部", "和泉式部"], answer: 1, explain: "紫式部。『枕草子』は清少納言" },
+  { label: "【日本史】", q: "鎖国中、長崎の出島で貿易を許された西洋の国は？", choices: ["スペイン", "ポルトガル", "オランダ"], answer: 2, explain: "オランダ。中国（清）とも長崎で貿易をした" },
+  { label: "【日本史】", q: "武士として初めて太政大臣になった人物は？", choices: ["平清盛", "源義経", "足利義満"], answer: 0, explain: "平清盛が1167年に太政大臣となった" },
+  { label: "【日本史】", q: "元寇（蒙古襲来）のときの鎌倉幕府の執権は？", choices: ["北条政子", "北条時宗", "北条泰時"], answer: 1, explain: "北条時宗。1274年の文永の役と1281年の弘安の役" },
+  { label: "【日本史】", q: "第二次世界大戦が終わった年は？", choices: ["1941年", "1945年", "1950年"], answer: 1, explain: "1945年に日本がポツダム宣言を受け入れた" },
+  { label: "【世界史】", q: "コロンブスがアメリカ大陸近くに到達した年は？", choices: ["1492年", "1588年", "1776年"], answer: 0, explain: "1492年、西インド諸島に到達した" },
+  { label: "【世界史】", q: "アメリカ独立宣言が出された年は？", choices: ["1689年", "1776年", "1861年"], answer: 1, explain: "1776年7月4日に独立宣言が出された" },
+  { label: "【世界史】", q: "フランス革命が始まった年は？", choices: ["1789年", "1815年", "1914年"], answer: 0, explain: "1789年、バスティーユ牢獄の襲撃から始まった" },
+  { label: "【世界史】", q: "産業革命が最初に起こった国は？", choices: ["フランス", "イギリス", "ドイツ"], answer: 1, explain: "18世紀後半のイギリス。蒸気機関や紡績機の発明が背景" },
+  { label: "【世界史】", q: "ルネサンスが始まった国は？", choices: ["イタリア", "スペイン", "ロシア"], answer: 0, explain: "14世紀ごろのイタリア（フィレンツェなど）から広がった" },
+  { label: "【世界史】", q: "第一次世界大戦が始まった年は？", choices: ["1904年", "1914年", "1939年"], answer: 1, explain: "1914年、サライェヴォ事件をきっかけに開戦" }
 ];
 
 // ========== ゲーム本体 ==========
@@ -157,17 +187,28 @@ function gainXp(amount) {
   }
 }
 
-// ---------- スクロール制御（答えるまで次へ進めない） ----------
+// ---------- スクロール制御 ----------
+// いつでもスワイプできる。次のカードは先に用意しておく。
+let bossActive = true;
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((e) => {
-    if (e.isIntersecting && e.intersectionRatio > 0.6 &&
-        e.target.dataset.kind === "q" && e.target.dataset.answered !== "1") {
-      feed.style.overflowY = "hidden";
+    if (!e.isIntersecting || e.intersectionRatio <= 0.6) return;
+    const card = e.target;
+    if (card.dataset.kind !== "q") return;
+    // 前の問題を答えずにスワイプしたら「スキップ」扱い（コンボだけ途切れる）
+    const prev = card.previousElementSibling;
+    if (prev && prev.dataset.kind === "q" && !prev.dataset.answered && !prev.dataset.skipped) {
+      prev.dataset.skipped = "1";
+      combo = 0;
+      updateHud();
     }
+    ensureNext(card);
   });
 }, { root: feed, threshold: [0.6] });
 
-function unlockFeed() { feed.style.overflowY = "scroll"; }
+function ensureNext(card) {
+  if (bossActive && !card.nextElementSibling) addQuestionCard();
+}
 function goNext(card) {
   const next = card.nextElementSibling;
   if (next) next.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -186,8 +227,10 @@ function addQuestionCard() {
   const card = el("section", "card");
   card.dataset.kind = "q";
 
-  card.appendChild(el("div", "q-label", "この単語の意味は？"));
-  card.appendChild(el("div", "q-text", q.q));
+  card.appendChild(el("div", "q-label", q.label || "この単語の意味は？"));
+  const qt = el("div", "q-text", q.q);
+  if (q.q.length > 12) qt.classList.add("small"); // 長い問題文は小さめに
+  card.appendChild(qt);
 
   const choices = el("div", "choices");
   const order = shuffle(q.choices.map((text, i) => ({ text, i })));
@@ -246,8 +289,7 @@ function onAnswer(card, q, order, choices, result, btn, picked) {
     bossDefeated(card, result);
   } else {
     result.appendChild(el("div", "hint", "⬆ 上にスワイプして次へ"));
-    addQuestionCard();
-    unlockFeed();
+    ensureNext(card);
   }
 }
 
@@ -275,8 +317,9 @@ function bossDefeated(card, result) {
     b.addEventListener("click", startBoss);
     clear.appendChild(b);
   }
+  bossActive = false;
+  while (card.nextElementSibling) card.nextElementSibling.remove();
   feed.appendChild(clear);
-  unlockFeed();
   result.appendChild(el("div", "hint", "⬆ 上にスワイプ"));
   clear.scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -287,8 +330,8 @@ function showDoneCard() {
   done.appendChild(el("div", "big-emoji", "🌙"));
   done.appendChild(el("div", "q-text", "今日の探索は終了！"));
   done.appendChild(el("div", "explain", `今日は ${BOSSES_PER_DAY} 体倒しました。また明日挑戦しよう。`));
+  bossActive = false;
   feed.appendChild(done);
-  unlockFeed();
 }
 
 function startBoss() {
@@ -297,6 +340,7 @@ function startBoss() {
     monster: MONSTERS[state.totalDefeated % MONSTERS.length]
   };
   combo = 0;
+  bossActive = true;
   updateHud();
   const card = addQuestionCard();
   card.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -305,7 +349,6 @@ function startBoss() {
 // ---------- キーボード操作（PC用） ----------
 document.addEventListener("keydown", (e) => {
   if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
-  if (feed.style.overflowY === "hidden") return; // 未回答なら進めない
   feed.scrollBy({ top: (e.key === "ArrowDown" ? 1 : -1) * feed.clientHeight, behavior: "smooth" });
 });
 
@@ -318,6 +361,8 @@ function init() {
   } else {
     addQuestionCard();
   }
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+  }
 }
-if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
 init();
